@@ -1,0 +1,101 @@
+/* 
+1. inline style attribute
+style="color: red"
+
+2. style tag in <head>
+<style>p { color: red; }</style>
+
+3. external file in <head> rel = relationship, type = doc type
+<link href="file.css" rel="stylesheet" type="text/css">
+
+
+anatomy of a CSS style
+
+selector, properties, values*/
+a {
+    color: red;
+    font-weight: bold;
+}
+
+/* applies to all list tags on the page that are
+direct childeren of a <div> tag*/
+div > li {
+    color: blue;
+}
+
+/* wild card, affect every element on page */
+* {
+    color: black;
+}
+
+/* use <div id="myStyle"> to access myStyle ID
+ID can only be used for a single id call in html */
+#myStyle {
+    color: black;
+}
+
+/* use <div id="myClass"> to acces myStyle CLASS
+CLASS can be called as many times as you like in id call in html */
+.myClass {
+    color: black;
+}
+
+/* use this to alter all <div> tags in the document */
+div {
+    color: black;
+}
+
+a {
+    color: black;
+}
+
+/* parent > child  or
+direct decendent selector 
+ONLY effects <li> inside of <ul> tags, direct decendent */
+ul > li {
+    color: black;
+}
+
+/* parent decendent 
+effects ANY <li> inside of <ul> tags */
+ul li {
+    color: black;
+}
+
+/* selector, selector 
+allows for multiple selecotrs to have the same rule */
+ul li,
+ol li {
+    color: black;
+}
+
+/* sibling1 + sibling 2
+selects sibling2 that follows imediatly after sibling1
+on the same indentation are siblings
+a <p> tag imediatly after an <h1> tag */
+h1 + p {
+    color: black
+}
+
+/* :not(selector)
+selects everything that is not .myClass */
+:not(.myClass) {
+    background: black;
+}
+
+/* p:not(.myClass)
+selects all <p> tags that are not in .myClass */
+p:not(.myClass) {
+    background: black;
+}
+
+/* :nth-child(n)
+effects only 2nd <li> tags */
+li:nth-child(2) {
+    color: red;
+}
+
+/* every old child */
+li:nth-child(even) {
+    color: black;
+}
