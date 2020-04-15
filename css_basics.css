@@ -99,3 +99,140 @@ li:nth-child(2) {
 li:nth-child(even) {
     color: black;
 }
+
+p {
+    display: inline;
+    /* toggle display type */
+    display: block;
+}
+
+/* to make a grid 
+create a class and call in the div wraping the elements */
+.column {
+    display: inline-block;
+    width: 50%;
+}
+
+/*position
+static -is default
+relative -
+absolute - removes it form the flow of the document, closeest to the parent that is set to relative
+fixed - fixed to the window, for scrolling
+sticky - requires a top: XXpx, like fixed that sticks to the top of the page while you scroll by it
+    - could be useful in menu bar situation
+*/
+a {
+    position: static;
+    position: relative;
+    top: 200px; /* in combination with relative, moves the tag down 200px from where it would have been */
+    position: absolute;
+    position: fixed;
+    position: sticky;
+}
+
+/* hover over */
+a:hover {
+    color: black;
+}
+
+/* transitions
+transitions the color over 0.3s
+*/
+a {
+    color: red;
+    transition: color 0.3s; 
+}
+
+/* width style color */
+border {
+    border: 2px solid black;
+}
+
+/* padding is space between content and border */
+/* one value applies to all four sides */
+/* two values applies to horizontal padding, first value, horizontal padding, second digit */
+/* four values applies to top, right, bottom, left */
+/* three values applies to top, horizontal, bottom */
+padding {
+    padding: 10px 20px 10px 20px;
+}
+
+/* margin */
+/* follows shorthand patter on padding */
+/* spaces the elements from each other */
+/* think of it as minimum gap between two objects */
+/* top objects next to each other each with 10px margin
+will only have a total of 10px margin between them */
+margin {
+    margin: 10px 20px 10px 20px;
+}
+
+/* what is the height of black box */
+/* border + padding + height + padding + border */
+.box {
+    background-color: yellow;
+    border: 20px;
+    padding: 50px;
+    margin: 100px;
+    height: 240px;
+    width: 240px;
+}
+
+/* if content is larger than container */
+/* overflow: hidden; cuts off anything outside the margin */
+/* overflow: scroll; allows for scrolling inside box */
+.box {
+    overflow: scroll;
+}
+
+/* changes the precieved size of box from just the content */
+/* to the size of the width and height  */
+/* constrains the whole box to be the height and width */
+box {
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+}
+/* none, inline, block, inline-block, table-cell, ..... */
+/* inline aligns the text in the box with the text baseline */
+/* block will try to span the page with a block */
+/* inline block will take up block size in the line of text */
+display {
+    display: none;
+
+}
+
+/* centering */
+/* text-align alters more than just the text */
+/* margin left/right auto centers the content in the center
+of the browser window
+margin:0 auto; is zero on top and bottom and auto on left and right */
+/* margin auto will automatically resize to browser window */
+body {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+}
+
+/* use at the top of your project to set defaults as you like them */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* use in combination with the rule above as a default */
+body * {
+    box-sizing: inherit;
+}
+
+/* max-width or min-width */
+/* write mobile first!!!!! */
+
+@media screen
+    and (min-width: 600px)
+    and (max-width: 800px) {
+    body {
+        background-color: red;
+    }
+}

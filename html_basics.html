@@ -4,9 +4,11 @@
         <link href="link_to.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div>
+        <!--Use a Header-->
+        <header>Menu and links here</header>
+        <!--Use a Main-->
+        <main>
             <div>This is text</div>
-            <div>
                 <a><!--anchor tag--></a>
                 <p><!--paragraph tag--></p>
                 <b><!--bold tag--></b>
@@ -34,7 +36,39 @@
                 <!--/ is the root of the html document-->
                 <img src="/images/logo.jpg" width="100px" height="100px"/>
                 <kbd>keyboard type</kbd>
+
+                <form>
+                    <input type="text" placeholder="email">
+                    <input type="radio">
+                    <select><!--drop down list-->
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                    </select>
+                    <!--text area of rows"x" columns"x" wide-->
+                    <textarea rows="4" cols="50"></textarea>
+                    <!--button-->
+                    <button type="submit">Done</button>
+                </form>
+
+
+                <table>
+                    <tr><!--table row-->
+                        <th>Name</th><!--table heading cell-->
+                        <th>Email</th><!--table head cell-->
+                    </tr>
+                    <tr>
+                        <td>Adama</td><!--table data cell-->
+                        <td>adam@gmail.com</td><!--table data cell-->
+                    </tr>
+                </table>
+                <!--lets you load another webpage as an element in your document-->
+                <!--be careful typically used for customer input forms-->
+                <!--or useful for embeded video, youtube...-->
+                <iframe src="url.com"></iframe>
             </div>
-        </div>
+    </main>
+    <footer>
+        
+    </footer>
     </body>
 </html>
